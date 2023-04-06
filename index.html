@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="calculator">
 			<div class="display">
-				<input type="text" id="result" disabled>
+				<span id = "result">0</span>
 			</div>
 			<div class="keys">
             <table>
@@ -35,15 +35,15 @@
                 <button onclick="updateDisplay('0')">0</button>
 				</tr>
 				<tr>
-				<button onclick="updateDisplay('.')">.</button>
-                <button onclick="updateDisplay('+')">+</button>
-                <button onclick="updateDisplay('%')">%</button>
+				<button onclick="updateDisplay('+')">+</button>
+                <button onclick="updateDisplay('*')">*</button>
+                <button onclick="updateDisplay('-')">-</button>
 				<button onclick="updateDisplay('/')">/</button>
 				</tr>
 				<tr>
-				<button onclick="updateDisplay('*')">*</button>
-                <button onclick="updateDisplay('-')">-</button>
-				<button onclick="calculate()">=</button>
+			    <button onclick="backspace()">&larr;</button>
+				<button onclick="updateDisplay('.')">.</button>
+				<button onclick="calculadora()">=</button>
 				</tr>
 			</table>
 			</div>
