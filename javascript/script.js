@@ -4,6 +4,7 @@ let result = document.getElementById('result');
 //lo mantiente, si no mantiene la ultima cifra 
 function updateDisplay(char) {
   if (result.innerHTML === '0') {
+    //si aca le pongo el + se queda el cero pero siempre aparece como primer item
     result.innerHTML = char;
   } else {
     result.innerHTML += char;
@@ -11,6 +12,7 @@ function updateDisplay(char) {
 }
 //limpia el visor
 function clearDisplay() {
+    //si borro el cero aca queda todo limpio pero se achica el visor 
   result.innerHTML = '0';
 }
 //se agrega funcion de borrar por item
