@@ -4,9 +4,14 @@ let result = document.getElementById('result');
 //lo mantiente, si no mantiene la ultima cifra 
 function updateDisplay(char) {
   if (result.innerHTML === '0') {
+    
     //si aca le pongo el + se queda el cero pero siempre aparece como primer item
     result.innerHTML = char;
-  } else {
+    if (result.innerHTML === '.') {
+      result.innerHTML = "0"+char;
+    }
+
+  } else {   
     result.innerHTML += char;
   }
 }
@@ -44,33 +49,35 @@ function multiplicacion() {
     result.innerHTML = mul;
 }
 
-
-function nums() {
-    //split para recibir solo una instruccion,multiplicacion
-    return result.innerHTML.split('/');
-    }
-    //la division revisa que el segundo numero no tenga el valor exacto de 0
-    function division() {
+//la division revisa que el segundo numero no tenga el valor exacto de 0
+function division() {
     let numsArray = nums();
     if (parseFloat(numsArray[1]) === 0) {
-    alert("No se puede dividir por cero");
-    clearResult();
+        alert("No se puede dividir por cero");
+        clearResult();
     } else {
         //si no es cero permite realizar la division 
-    let quotient = parseFloat(numsArray[0]) / parseFloat(numsArray[1]);
-    result.innerHTML = quotient;
-     }
+        let quotient = parseFloat(numsArray[0]) / parseFloat(numsArray[1]);
+        result.innerHTML = quotient;
     }
-    
-     // segun el signo que se seleccione en el dom es la funcion que va a ejecutar
-    function calculadora() {
+}
+
+
+function nums() {
+  //split para recibir solo una instruccion,multiplicacion
+  return result.innerHTML.split('/');
+}
+
+   
+// segun el signo que se seleccione en el dom es la funcion que va a ejecutar
+function calculadora() {
     if (result.innerHTML.includes('+')) {
-    suma();
+        suma();
     } else if (result.innerHTML.includes('-')) {
-    resta();
+        resta();
     } else if (result.innerHTML.includes('*')) {
-    multiplicacion();
+        multiplicacion();
     } else if (result.innerHTML.includes('/')) {
-    division();
+        division();
     }
 }
