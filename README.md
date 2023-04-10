@@ -1,5 +1,1 @@
-El contexto del error es el siguiente: Al evaluar algunas operaciones antecedidas por un 0, el resultado final no es correcto. Por ejemplo, el valor de 062/2 
-da 25 cuando debería dar 31. Esto es por la función eval, que evalua un string y entrega un resultado en este caso incorrecto). 
-En conversación con el profesor sobre el programa mencionó que no deberíamos usar eval, sino una función separada para cada operación aritmética (+-*/), por
-lo tanto eso es lo que hay que implementar. 
-dsfsfsd
+Proyecto que consiste en la aplicación de una calculadora con Bootstrap, javascript, html y css. Para su implementación, es necesario descargar o clonar el archivo y correrlo en un live server o abrir desde el directorio el archivo calculadora.html
